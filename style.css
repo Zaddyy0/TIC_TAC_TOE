@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0e0e12; /* dark, mature */
+  text-align: center;
+  color: #e5e7eb; /* subtle light text */
+}
+
+.container {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game {
+  height: 60vmin;
+  width: 60vmin;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5vmin;
+  /* no extra padding or transforms to keep arrangement identical */
+}
+
+.box {
+  height: 18vmin;
+  width: 18vmin;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.35);
+  font-size: 8vmin;
+  color: #34d399; /* minty neon for marks */
+  background-color: #1a1d24; /* dark tile */
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+}
+
+.box:hover {
+  /* no scale -> grid stays perfectly aligned */
+  background-color: #232832;
+  box-shadow: 0 0 1.2rem rgba(52, 211, 153, 0.15);
+}
+
+#reset-btn {
+  padding: 1rem;
+  font-size: 1.25rem;
+  background-color: #1f2937;
+  color: #e5e7eb;
+  border-radius: 1rem;
+  border: none;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#reset-btn:hover {
+  background-color: #111827;
+  box-shadow: 0 0 0.6rem rgba(255, 255, 255, 0.08);
+}
+
+#new-btn {
+  padding: 1rem;
+  font-size: 1.25rem;
+  background-color: #1f2937;
+  color: #e5e7eb;
+  border-radius: 1rem;
+  border: none;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#new-btn:hover {
+  background-color: #111827;
+  box-shadow: 0 0 0.6rem rgba(255, 255, 255, 0.08);
+}
+
+#msg {
+  color: #34d399;
+  font-size: 5vmin;
+  transition: color 0.2s ease;
+}
+
+.msg-container {
+  height: 100vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.hide {
+  display: none;
+}
